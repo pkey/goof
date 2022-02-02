@@ -157,6 +157,7 @@ exports.create = function (req, res, next) {
   if (typeof (item) == 'string' && item.match(imgRegex)) {
     var url = item.match(imgRegex)[1];
     console.log('found img: ' + url);
+    console.log('random log');
 
     exec('identify ' + url, function (err, stdout, stderr) {
       console.log(err);
